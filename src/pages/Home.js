@@ -8,13 +8,13 @@ const Home= async () => {
     //Convertimos nuestro template para poder hacer iteración por cada uno de los personajes quee stamos recibiendo de la Api:
     
     const view= `
-    <div class="Characters">
+    <div class="characters">
     <!--Iteramos sobre todos los personajes que están dentro de la propiedad results de la API. Y por cada personaje que recibo voy a utilizar sus propiedades en el template-->
     ${characters.results.map( character => `
-    <article class= "Characters-item">
+    <article class= "characters-item">
         <a href= "#/${character.id}/">
             <img src="${character.image}" alt="${character.name}">
-            <h2>${character.name}</h2>
+            <h2 class="character-name">${character.name}</h2>
         </a>
     </article>
     `

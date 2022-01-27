@@ -40,6 +40,32 @@ const router = async () => {//Vamos a esperar hasta que algo esté sucediendo...
 
     //A la sección content le hacemos un innerHtml de render()
     content.innerHTML= await render();//Esto nos va hacer render de nuestra aplicación
+
+    const headerBackground = header;
+    const btnSwitch = headerBackground.querySelector("#switch")
+    console.log(btnSwitch);
+
+    btnSwitch.addEventListener('click', () => {
+        document.body.classList.toggle('dark')
+        btnSwitch.classList.toggle('active')
+
+        // Save mode in localStorage
+        if(document.body.classList.contains('dark')){
+            localStorage.setItem('dark-mode', 'true')
+        } else {
+            localStorage.setItem('dark-mode', 'false')
+        }
+    })
+
+    if(localStorage.getItem('dark-mode') === 'true'){
+        document.body.classList.add('dark')
+        btnSwitch.classList.add('active')
+    } else {
+        document.body.classList.remove('dark')
+        btnSwitch.classList.remove('active')
+    }
+
+
 };
 
 export default router; //Exportamos nuestro manejador de rutas

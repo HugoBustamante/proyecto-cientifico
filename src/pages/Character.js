@@ -7,12 +7,12 @@ const Character = async () => {
     const character= await getData(id);// A getData le pasamos el id
 
     const view= `
-    <div class="Characters-inner">
-        <article class= "Characters-card">
+    <div class="characters-inner">
+        <article class="characters-card">
         <img src="${character.image}" alt="${character.name}"/>
             <h2>${character.name}</h2>
         </article>
-        <article class="Characters-card">
+        <article class="characters-card">
             <h3>Episodes:<span>${character.episode.lenght}</span></h3>
             <h3>Status:<span>${character.status}</span></h3>
             <h3>Species:<span>${character.species}</span></h3>

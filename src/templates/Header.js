@@ -2,18 +2,17 @@
 const Header = () => {
     const view= `
     <div class="header-main">
-    <div class="header-logo">
-        <h1>
-            <a href="#"><!--Para que no haya un refresh cuando precionamos sobre esté titulo en vez de colocar "/"               colocamos "#" de está manera hashchange, que ejecuta la función router, es disparado.-->
-                100tifi.co
-            </a>
-        </h1>
-    </div>
-    <div class="header-nav">
-        <a href="#/about/">
-            About
-        </a>
-    </div>
+        <div class="header-logo">
+            <!--Para que no haya un refresh cuando precionamos sobre esté titulo en vez de colocar "/" colocamos "#" de está manera hashchange, que ejecuta la función router, es disparado.-->
+            <a href="/"><img src="https://i.imgur.com/7utDxm8.png" alt="Rick and Morty"></a>
+        </div>
+        <nav class="header-nav">
+                <a href="#/about/" class="nav-element">About</a>
+                <button class="switch" id="switch">
+                    <span><i class="fas fa-sun"></i></span>
+                    <span><i class="fas fa-moon"></i></span>
+                </button>
+        </nav>
     </div>
     `;
 
